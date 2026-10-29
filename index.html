@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Portfolio of Vong Khema, Digital Economy student at the National University of Management, Cambodia.">
+<style>:root{color-scheme:light}body{margin:0}[hidden]{display:none!important}img{max-width:100%}</style>
+<title>Vong Khema Portfolio</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: warm-white editorial page. Fixed left rail of section labels on desktop, single column on phones. Forest green is the only accent. */
+:root{
+  --paper:#f6f3ec;
+  --surface:#efebe1;
+  --ink:#1d2421;
+  --muted:#5d6560;
+  --rule:#d6d1c4;
+  --accent:#1f4a3a;
+  --accent-soft:#dfe8e0;
+  --on-accent:#f6f3ec;
+  --f-display:'Newsreader',Georgia,'Times New Roman',serif;
+  --f-body:'Instrument Sans','Helvetica Neue',Arial,sans-serif;
+  --f-mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#121816;--surface:#1a221f;--ink:#e9e6dd;--muted:#9aa49d;--rule:#2d3833;--accent:#8fc4a8;--accent-soft:#1f2e27;--on-accent:#121816;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#121816;--surface:#1a221f;--ink:#e9e6dd;--muted:#9aa49d;--rule:#2d3833;--accent:#8fc4a8;--accent-soft:#1f2e27;--on-accent:#121816;color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.65;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto}
+.label{font-family:var(--f-mono);font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.skip{position:absolute;left:-999px}
+.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+main:focus{outline:none}
+.skip:focus{left:16px;top:8px;background:var(--accent);color:var(--on-accent);padding:8px 12px;z-index:30}
+
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:25;background:var(--paper)}
+header.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--paper);display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:14px;border-bottom:1px solid var(--rule)}
+.brand{font-family:var(--f-display);font-weight:600;font-size:21px;text-decoration:none;letter-spacing:-.01em}
+nav{display:flex;gap:6px 22px;flex-wrap:wrap;justify-content:flex-end}
+nav a{text-decoration:none;color:var(--muted);font-size:15px;padding:10px 0;border-bottom:1.5px solid transparent;transition:color .15s,border-color .15s}
+nav a:hover,nav a[aria-current]{color:var(--ink);border-color:var(--accent)}
+
+.hero{padding-block:clamp(56px,10vw,128px) clamp(48px,8vw,96px)}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(240px,340px);gap:clamp(28px,5vw,72px);align-items:end}
+.hero-text{min-width:0}
+.portrait{position:relative;margin:0 16px 16px 0;aspect-ratio:4/5;max-width:100%;isolation:isolate}
+.portrait::before{content:"";position:absolute;inset:0;transform:translate(16px,16px);background:var(--accent);border-radius:2px;z-index:-1}
+.portrait img{display:block;width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:2px;background:#fff}
+.portrait figcaption{position:absolute;left:-1px;bottom:22px;background:var(--paper);color:var(--ink);padding:7px 14px 7px 12px;font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--rule);border-left:0}
+.hero h1{font-family:var(--f-display);font-weight:500;font-size:clamp(44px,7.6vw,96px);line-height:.96;letter-spacing:-.03em;margin:20px 0 22px}
+.hero .headline{font-family:var(--f-display);font-style:italic;font-size:clamp(20px,3vw,30px);color:var(--accent);margin:0 0 26px;text-wrap:balance}
+.hero p.lead{max-width:56ch;font-size:clamp(17px,2vw,20px);color:var(--muted);margin:0 0 32px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border:1.5px solid var(--accent);text-decoration:none;font-weight:600;border-radius:999px;transition:background .15s,color .15s,transform .15s}
+.btn.primary{background:var(--accent);color:var(--on-accent)}
+.btn:hover{transform:translateY(-2px)}
+.btn:not(.primary):hover{background:var(--accent-soft)}
+
+section{border-top:1px solid var(--rule);padding-block:clamp(40px,7vw,80px);display:grid;grid-template-columns:200px minmax(0,1fr);gap:clamp(20px,5vw,64px)}
+section>.label{padding-top:10px}
+h2{font-family:var(--f-display);font-weight:500;font-size:clamp(30px,4.4vw,48px);line-height:1.1;letter-spacing:-.02em;margin:0 0 24px;text-wrap:balance}
+.content>*:last-child{margin-bottom:0}
+.content p{max-width:62ch;margin:0 0 16px}
+
+.timeline{list-style:none;margin:0;padding:0 0 0 22px;border-left:1.5px solid var(--rule)}
+.timeline li{position:relative;padding:0 0 32px}
+.timeline li:last-child{padding-bottom:0}
+.timeline li::before{content:"";position:absolute;left:-29px;top:9px;width:11px;height:11px;border-radius:50%;background:var(--paper);border:2px solid var(--accent)}
+.timeline li.now::before{background:var(--accent)}
+.timeline h3,.cards h3{font-family:var(--f-display);font-weight:600;font-size:clamp(21px,2.4vw,26px);line-height:1.2;margin:2px 0 4px;letter-spacing:-.01em}
+.timeline .when{display:block;margin-bottom:6px}
+.timeline p{margin:0 0 6px;color:var(--muted);font-size:16px}
+.timeline ul{margin:6px 0 0;padding-left:18px;color:var(--muted);font-size:16px;max-width:60ch}
+.timeline ul li{padding:0 0 4px;position:static}
+.timeline ul li::before{display:none}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:4px;padding:24px;min-width:0}
+.card .label{display:block;margin-bottom:10px}
+.card p{margin:0;color:var(--muted);font-size:16px}
+.card ul{margin:0;padding-left:18px;color:var(--muted);font-size:16px}
+.card li{padding-bottom:6px}
+
+.skillgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:36px 40px}
+.skillgrid h3{font-family:var(--f-display);font-weight:600;font-size:22px;margin:0 0 12px;padding-bottom:10px;border-bottom:1.5px solid var(--accent)}
+.skillgrid ul{list-style:none;margin:0;padding:0}
+.skillgrid li{padding:7px 0;border-bottom:1px solid var(--rule);font-size:16px}
+.note{margin-top:28px;color:var(--muted);font-size:15px;max-width:62ch}
+
+.tags{list-style:none;margin:20px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.tags li{padding:8px 16px;border:1px solid var(--rule);border-radius:999px;background:var(--surface);font-size:15.5px}
+
+.contact h2{font-size:clamp(34px,6vw,64px)}
+.mail{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:6px 0 24px}
+.mail code{font-family:var(--f-mono);font-size:clamp(14px,2.4vw,19px);padding:11px 16px;background:var(--surface);border:1px solid var(--rule);border-radius:4px;overflow-wrap:anywhere;min-width:0}
+.mail button{font:inherit;font-weight:600;padding:10px 18px;background:transparent;color:var(--accent);border:1.5px solid var(--accent);border-radius:999px;cursor:pointer;transition:background .15s}
+.mail button:hover{background:var(--accent-soft)}
+.links{display:flex;gap:12px;flex-wrap:wrap}
+footer{border-top:1px solid var(--rule);padding-block:24px;color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:14px}
+
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr}
+  .portrait{max-width:300px}
+  section{grid-template-columns:1fr;gap:6px}
+  section>.label{padding-top:0}
+  nav{gap:4px 16px}
+  nav a{font-size:14px}
+  .brand{font-size:19px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
+</style>
+
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+  <header class="bar">
+    <a class="brand" href="#home">Vong Khema</a>
+    <nav aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#interests">Interests</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div class="hero" id="home">
+      <div class="hero-text">
+      <span class="label">Portfolio · Phnom Penh, Cambodia</span>
+      <h1>Vong Khema</h1>
+      <p class="headline">Digital Economy Student | Aspiring Business Development Professional</p>
+      <p class="lead">Second-year Digital Economy student at the National University of Management with interests in business development, digital innovation, and research. Experienced in supporting event coordination, public relations, and teamwork through volunteer activities and university projects. Possesses strong problem-solving and organizational skills, with a willingness to learn and adapt in professional environments.</p>
+      <div class="cta">
+        <a class="btn primary" href="#contact">Get in touch</a>
+        <a class="btn" href="#about">About me</a>
+      </div>
+      </div>
+      <figure class="portrait"><img src="khema.jpg" width="800" height="821" alt="Portrait of Vong Khema in a black blazer and white shirt"><figcaption>Digital Economy, NUM</figcaption></figure>
+    </div>
+
+    <section id="about" aria-labelledby="h-about">
+      <span class="label">About me</span>
+      <div class="content">
+        <h2 id="h-about">Curious about how digital solutions create value.</h2>
+        <p>I am a second-year Digital Economy student at the National University of Management in Cambodia. I am interested in business, technology, entrepreneurship and research, and in the ways digital solutions can create value for businesses and communities.</p>
+        <p>I enjoy exploring new ideas, solving problems and understanding how businesses find opportunities and build relationships with customers and partners.</p>
+        <p>I am drawn to business development, digital business, market research and entrepreneurship. I want practical experience, stronger communication and analytical skills, and a chance to contribute to meaningful projects while I keep learning.</p>
+      </div>
+    </section>
+
+    <section id="education" aria-labelledby="h-education">
+      <span class="label">Education</span>
+      <div class="content">
+        <h2 id="h-education">Where I have studied</h2>
+        <ol class="timeline">
+          <li class="now">
+            <span class="label when">Present</span>
+            <h3>National University of Management (NUM)</h3>
+            <p>Bachelor of Science in Digital Economy, Faculty of Digital Economy. Second-year student.</p>
+          </li>
+          <li>
+            <span class="label when">English language study</span>
+            <h3>ACE, Australian Centre for Education</h3>
+            <p>Graduated from the General English Program.</p>
+          </li>
+          <li>
+            <span class="label when">2024</span>
+            <h3>American Intercon School (AIS)</h3>
+            <p>High School Diploma.</p>
+            <ul>
+              <li>Class Monitor.</li>
+              <li>Member of the Student Council's Quality and Discipline Committee, 2022 to 2024.</li>
+              <li>Project Leader for the mathematics competition project "Parabola in Real Life" in 2023, which received a championship award.</li>
+            </ul>
+          </li>
+          <li>
+            <span class="label when">2021</span>
+            <h3>O-ambel High School</h3>
+            <p>Secondary School Diploma.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="experience" aria-labelledby="h-experience">
+      <span class="label">Experience &amp; activities</span>
+      <div class="content">
+        <h2 id="h-experience">Research, community and leadership</h2>
+        <div class="cards">
+          <article class="card">
+            <span class="label">Intern</span>
+            <h3>NUM Research Club</h3>
+            <p>Intern at the National University of Management Research Club. I learned how research activities are carried out, worked with other members, and contributed to academic and research activities.</p>
+          </article>
+          <article class="card">
+            <span class="label">Class Monitor · Quality and Discipline Committee · 2022 to 2024</span>
+            <h3>AIS Student Council</h3>
+            <p>Class Monitor and member of the Quality and Discipline Committee. I practiced responsibility, communication, coordination and teamwork, and helped support a positive school environment.</p>
+          </article>
+          <article class="card">
+            <span class="label">Volunteer</span>
+            <h3>Public Relations and Communications</h3>
+            <ul>
+              <li>Assisted in promoting the workshop and sharing information with potential participants.</li>
+              <li>Helped communicate with participants and panelists.</li>
+              <li>Supported communication and coordination to help workshop activities run smoothly.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      PROJECTS SECTION (hidden until a completed project is ready)
+      To add it: copy the block below above the Skills section, add <a href="#projects">Projects</a> to the nav,
+      and fill each card with the real title, description, your role, skills used and a link.
+      Only add work you can explain and demonstrate.
+
+      <section id="projects">
+        <span class="label">Projects</span>
+        <div class="content">
+          <h2>Academic work and prototypes</h2>
+          <div class="cards">
+            <article class="card">
+              <span class="label">Academic project</span>
+              <h3>Project title</h3>
+              <p>Short description. My role: ... Skills applied: ...</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    -->
+
+    <section id="skills" aria-labelledby="h-skills">
+      <span class="label">Skills</span>
+      <div class="content">
+        <h2 id="h-skills">What I work with, and what I'm still learning</h2>
+        <div class="skillgrid">
+          <div>
+            <h3>Business and Entrepreneurship</h3>
+            <ul>
+              <li>Business idea development</li>
+              <li>Digital business concepts</li>
+              <li>Basic market research</li>
+              <li>Customer-oriented thinking</li>
+              <li>Problem-solving</li>
+              <li>Interest in business development and partnerships</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Digital Tools</h3>
+            <ul>
+              <li>Figma</li>
+              <li>Google AI Studio</li>
+              <li>AI-assisted coding and prototyping</li>
+              <li>Basic HTML, CSS and JavaScript</li>
+              <li>Basic Node.js</li>
+              <li>GitHub and Cloudflare</li>
+              <li>QGIS for academic mapping</li>
+              <li>R for quantitative and statistical learning</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Research and Analysis</h3>
+            <ul>
+              <li>Academic research</li>
+              <li>Information gathering</li>
+              <li>Field observation</li>
+              <li>Data interpretation</li>
+              <li>Quantitative problem-solving</li>
+              <li>Report and presentation preparation</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Communication and Collaboration</h3>
+            <ul>
+              <li>Written communication</li>
+              <li>Teamwork</li>
+              <li>Event coordination support</li>
+              <li>Participant communication</li>
+              <li>Presentation skills</li>
+              <li>Willingness to learn and adapt</li>
+            </ul>
+          </div>
+        </div>
+        <p class="note">My technical skills are at a beginner to intermediate level. I use them to build prototypes and support my studies, and I am still developing them.</p>
+      </div>
+    </section>
+
+    <section id="interests" aria-labelledby="h-interests">
+      <span class="label">Career interests</span>
+      <div class="content">
+        <h2 id="h-interests">Where I want to grow</h2>
+        <p>I want to understand what businesses need, spot opportunities, talk with people, and help build strong business relationships. As an intern, my aim is to learn quickly and be useful to the team.</p>
+        <ul class="tags">
+          <li>Business Development</li>
+          <li>Sales and Business Development Internships</li>
+          <li>Partnership Development</li>
+          <li>Client Relations</li>
+          <li>Digital Business</li>
+          <li>Entrepreneurship</li>
+          <li>Market Research</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="contact" aria-labelledby="h-contact">
+      <span class="label">Contact</span>
+      <div class="content">
+        <h2 id="h-contact">Let's talk about internships and projects.</h2>
+        <div class="links">
+          <a class="btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=vongkhema2007@gmail.com&su=Hello%20Khema">Email<span class="sr-only"> Vong Khema (opens Gmail in a new tab)</span></a>
+          <a class="btn" href="https://www.linkedin.com/in/khema-vong-526289406/">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a>
+          <a class="btn" href="https://www.facebook.com/share/1FVkHymqvV/?mibextid=wwXIfr">Facebook<span class="sr-only"> (opens in a new tab)</span></a>
+          <a class="btn" href="https://t.me/kkhema">Telegram<span class="sr-only"> (opens in a new tab)</span></a>
+        </div>
+        <p class="note">vongkhema2007@gmail.com<br>Telegram: @kkhema</p>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>© 2026 Vong Khema</span><span>National University of Management, Phnom Penh</span></footer>
+</div>
+
+<script>
+(function(){
+  var links=[].slice.call(document.querySelectorAll('nav a'));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){links.forEach(function(a){if(a.getAttribute('href')==='#'+e.target.id){a.setAttribute('aria-current','true')}else{a.removeAttribute('aria-current')}})}
+    })},{rootMargin:'-40% 0px -55% 0px'});
+    secs.forEach(function(s){if(s)io.observe(s)});
+  }
+})();
+</script>
+
+</body>
+</html>
